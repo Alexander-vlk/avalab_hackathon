@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     'theme',
     'django_browser_reload',
     'debug_toolbar',
+    
+    'auth.apps.AuthConfig',
 ]
 
 MIDDLEWARE = [
