@@ -12,6 +12,11 @@ The project for hackathon of avalab
 git clone https://github.com/Alexander-vlk/avalab_hackathon.git
 ```
 
+Установите виртуальное окружение и выберите нужный интерпретатор
+```bash
+py -m venv venv
+```
+
 #### Установка зависимостей
 ```bash
 python -m pip install -r requirements.txt
