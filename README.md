@@ -6,6 +6,17 @@ The project for hackathon of avalab
 python -m pip install -r requirements.txt
 ```
 #### Запуск прооекта
+
+Для разработки
+```bash
+docker-compose -f docker-compose.dev.yml up
+```
+
+Для прода
+```bash
+docker-compose -f docker-compose.yml up
+```
+
 ```python
 python manage.py tailwind start
 python manage.py runserver
