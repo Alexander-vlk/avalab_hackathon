@@ -1,2 +1,3 @@
 # avalab_hackathon
-22_11_2024
+The project for hackathon of avalab 
+#### Date: 22.11.2024
