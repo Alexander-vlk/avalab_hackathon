@@ -17,6 +17,7 @@ docker-compose -f docker-compose.dev.yml up
 docker-compose -f docker-compose.yml up
 ```
 
+Запуск проекта
 ```python
 python manage.py tailwind start
 python manage.py runserver
