@@ -1,0 +1,9 @@
+django == 4.2
+django-browser-reload
+django-debug-toolbar 
+django-tailwind 
+pytest
+pillow
+numpy
+pandas
+requests
