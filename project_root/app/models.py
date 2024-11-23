@@ -9,17 +9,25 @@ class UserData(models.Model):
     )
     business_type = models.CharField(
         max_length=200,
+        null=True,
+        blank=True,
         verbose_name='Тип бизнеса',
     )
     region = models.CharField(
         max_length=200,
+        null=True,
+        blank=True,
         verbose_name='Регион',
     )
     industry = models.CharField(
         max_length=200,
+        null=True,
+        blank=True,
         verbose_name='Отрасль бизнеса'
     )
     is_innovative = models.BooleanField(
+        null=True,
+        blank=True,
         verbose_name='Есть ли инновации',
     )
     
