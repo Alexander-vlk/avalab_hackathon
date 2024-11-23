@@ -12,16 +12,50 @@
     <form
     action="{% url 'app:index' %}"
     method="POST"
-    class='bg-white p-4 shadow rounded-sm'
+    class='bg-blue-950 bg-opacity-50 p-4 shadow-xl rounded-lg'
 >
+    <style>
+        input {
+            border: none;
+        }
+        #is_innovative {
+            background: #2E3F7F;
+            width: 25px;
+            height: 25px;
+            border-radius: 10px;
+            border: 5px solid #2E3F7F;  
+        }
+        #is_innovative:checked {
+            background: white;
+        }
+    </style>
     {% csrf_token %}
 
-    {{ form }}
-    <input
-        type="submit"
-        value="Отправить"
-        class='bg-blue-700 rounded-md text-white px-5 py-1 shadow mt-5 w-full mx-auto'
+    <div class="text-white">
+        <label for="name" class='ml-4'>Название бизнеса</label>
+        {{ form.name }}
+    </div>
+    <div class="text-white mt-2">
+        <label for="form.business_type" class='ml-4'>Тип бизнеса</label>
+        {{ form.business_type }}
+    </div>
+    <div class="text-white mt-2">
+        <label for="region" class='ml-4'>Регион</label>
+        {{ form.region }}
+    </div>
+    <div class="text-white mt-2">
+        <label for="industry" class='ml-4'>Отрасль бизнеса</label>
+        {{ form.industry }}
+    </div>
+    <div class="text-white mt-5">
+        <label for="checkbox" class='text-white ml-4' >Является инновационным</label>
+        {{ form.is_innovative }}
+    </div>
+    <button
+        class='bg-blue-900 w-full py-4 mt-5 text-white shadow-md rounded-md'
     >
+    Отправить
+    </button>
 </form>
 </main>
 {% endblock content %}
