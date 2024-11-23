@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
-    'debug_toolbar',
+    # 'debug_toolbar',
     
     'app.apps.AppConfig',
 ]
@@ -33,7 +33,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
