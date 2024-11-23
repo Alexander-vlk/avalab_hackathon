@@ -39,6 +39,13 @@ NPM_PATH=
 Для получения секретного ключа обратитесь к @Alexander-vlk
 В качестве NPM_PATH укажите абсолютный путь к файлу npm.cmd
 
+#### Tailwindcss
+
+```bash
+python manage.py tailwind init
+python manage.py tailwind install
+```
+
 #### Запуск прооекта
 
 Для разработки
