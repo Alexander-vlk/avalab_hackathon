@@ -7,6 +7,8 @@ FIELD_STYLE_CLASS = "w-full px-5 py-3 text-white bg-blue-900 bg-opacity-50 round
  
 
 class UserDataForm(forms.ModelForm):
+    """Форма для ввода данных о бизнесе"""
+    
     class Meta:
         model = UserData
         fields = [

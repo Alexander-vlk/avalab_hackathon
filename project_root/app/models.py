@@ -2,6 +2,8 @@ from django.db import models
 
 
 class UserData(models.Model):
+    """Модель пользовательских данных"""
+    
     name = models.CharField(
         max_length=200,
         unique=True,
@@ -49,6 +51,8 @@ class UserData(models.Model):
     
     
 class GeneratedData(models.Model):
+    """Модель сгенерированных с помощью ИИ данных"""
+    
     user_data = models.OneToOneField(
         UserData,
         on_delete=models.CASCADE,
@@ -82,6 +86,8 @@ class GeneratedData(models.Model):
 
 
 class DataFromSite(models.Model):
+    """Модель данных, полученных с сайта"""
+    
     site_url = models.URLField(
         max_length=500,
         verbose_name='URL сайта',
@@ -106,5 +112,6 @@ class DataFromSite(models.Model):
         verbose_name = 'Данные с сайта'
         
     def __str__(self):
+        """Возвращает url сайта, с которого получены данные"""
         return self.site_url
     
