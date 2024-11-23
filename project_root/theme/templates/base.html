@@ -6,10 +6,32 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://kit.fontawesome.com/13c267004c.js" crossorigin="anonymous"></script>
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-gray-50 font-serif">
+	<body class="bg-black font-mono"
+		style="
+		background: rgb(49,27,255);
+background: radial-gradient(circle, rgba(49,27,255,1) 0%, rgba(98,98,241,1) 16%, rgba(0,0,0,1) 100%);"
+	>
+		<header
+			class='max-w-3xl mx-auto flex my-5 justify-between items-center'
+		>
+			<h1
+				class='text-white font-extrabold text-3xl'
+			>
+			Server error 500
+			</h1>
+			<nav class='text-white text-4xl'>
+				<a href="" class='hover:text-blue-700  transition-all'>
+					<i class="fa-brands fa-telegram"></i>
+				</a>
+				<a href="" class='hover:text-blue-700  transition-all'>
+					<i class="fa-brands fa-vk"></i>
+				</a>
+			</nav>
+		</header>
 		{% block content %}{% endblock content %}
 	</body>
 </html>
