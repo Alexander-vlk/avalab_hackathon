@@ -3,8 +3,8 @@ from django import forms
 from app.models import UserData
 
 
-FIELD_STYLE_CLASS = "w-full px-5 py-1 text-gray-700 bg-gray-200 rounded my-3" 
-
+FIELD_STYLE_CLASS = "w-full px-5 py-3 text-white bg-blue-900 bg-opacity-50 rounded-md my-3" 
+ 
 
 class UserDataForm(forms.ModelForm):
     class Meta:
@@ -20,25 +20,31 @@ class UserDataForm(forms.ModelForm):
             'name': forms.TextInput(
                 attrs={
                     'class': FIELD_STYLE_CLASS,
-                    'placeholder': 'Название бизнеса',
+                    'name': 'name',
                     }
                 ),
             'business_type': forms.TextInput(
                 attrs={
                     'class': FIELD_STYLE_CLASS,
-                    'placeholder': 'Тип бизнеса',
+                    'name': 'business_type',
                     }
                 ),
             'region': forms.TextInput(
                 attrs={
                     'class': FIELD_STYLE_CLASS,
-                    'placeholder': 'Регион',
+                    'name': 'region',
                     }   
                 ),
             'industry': forms.TextInput(
                 attrs={
                     'class': FIELD_STYLE_CLASS,
-                    'placeholder': 'Отрасль',
+                    'name': 'industry',
+                    }
+                ),
+            'is_innovative': forms.CheckboxInput(
+                attrs={
+                    'id': 'is_innovative',
+                    'name': 'checkbox',
                     }
                 ),
         }
