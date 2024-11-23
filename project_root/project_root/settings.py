@@ -104,4 +104,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-NPM_BIN_PATH = env("NPM_PATH")
+NPM_BIN_PATH = 'C:/Program Files/nodejs/npm.cmd'
