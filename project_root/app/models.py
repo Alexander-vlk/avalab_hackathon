@@ -46,3 +46,39 @@ class UserData(models.Model):
     
     def __str__(self):
         return self.name
+
+
+class DataFromSite(models.Model):
+    user_data = models.OneToOneField(
+        UserData,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        verbose_name='Данные с сайта',
+    )
+    site_url = models.URLField(
+        max_length=500,
+        verbose_name='URL сайта',
+    )
+    text = models.CharField(
+        max_length=5000,
+        null=True,
+        blank=True,
+        verbose_name='Текст с сайта',
+    )
+    
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name='Дата создания',
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name='Дата обновления',
+    )
+    
+    class Meta:
+        verbose_name = 'Данные с сайта'
+        
+    def __str__(self):
+        return self.site_url
+    
