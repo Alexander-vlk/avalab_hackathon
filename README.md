@@ -4,6 +4,7 @@ The project for hackathon of avalab
 #### Требования
 
 - установленный npm
+- pgAdmin
 
 #### Установка
 
@@ -36,6 +37,10 @@ LANGUAGE_CODE=ru
 ```
 
 Для получения секретного ключа обратитесь к @Alexander-vlk
+
+#### PostgreSQL
+
+В pgAdmin4 создайте базу данных с паролем, логином и названием БД, как указано в .env
 
 #### Tailwindcss
 
