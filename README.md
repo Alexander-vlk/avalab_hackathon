@@ -1,6 +1,8 @@
 # avalab_hackathon
 The project for hackathon of avalab 
 
+![scheme](scheme.png)
+
 #### Требования
 
 - установленный npm
