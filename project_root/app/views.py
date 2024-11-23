@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 
@@ -7,8 +7,8 @@ from app.models import UserData
 
 
 
-def index(request):
-    template = 'app/form.html'
+def index(request, business_name):
+    template = 'app/info.html'
     return render(request, template)
 
 
@@ -17,4 +17,10 @@ class UserDataCreateView(CreateView):
     template_name = 'app/form.html'
     form_class = UserDataForm
     success_url = reverse_lazy('app:index')
+    
+    def form_valid(self, form):
+        business_name = form.cleaned_data.get('name')
+        form = super().form_valid(form)
+        return redirect('app:info', business_name)
+    
     
