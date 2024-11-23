@@ -33,11 +33,9 @@ PG_PASSWORD=1234
 PG_HOST=localhost
 PG_PORT=5432
 LANGUAGE_CODE=ru
-NPM_PATH=
 ```
 
 Для получения секретного ключа обратитесь к @Alexander-vlk
-В качестве NPM_PATH укажите абсолютный путь к файлу npm.cmd
 
 #### Tailwindcss
 
@@ -48,18 +46,7 @@ python manage.py tailwind install
 
 #### Запуск прооекта
 
-Для разработки
 ```bash
-docker-compose -f docker-compose.dev.yml up
-```
-
-Для прода
-```bash
-docker-compose -f docker-compose.yml up
-```
-
-Запуск проекта
-```python
 python manage.py tailwind start
 python manage.py runserver
 ```
