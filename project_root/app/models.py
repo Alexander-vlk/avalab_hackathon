@@ -49,13 +49,6 @@ class UserData(models.Model):
 
 
 class DataFromSite(models.Model):
-    user_data = models.OneToOneField(
-        UserData,
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        verbose_name='Данные с сайта',
-    )
     site_url = models.URLField(
         max_length=500,
         verbose_name='URL сайта',
