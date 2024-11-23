@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from app.models import UserData, DataFromSite
+from app.models import UserData, DataFromSite, GeneratedData
 
 
 @admin.register(UserData)
@@ -17,5 +17,19 @@ class DataFromSite(admin.ModelAdmin):
         ]
     list_display_links = [
         'id'
+    ]
+    
+    
+@admin.register(GeneratedData)
+class GeneratedDataAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'user_data__name',
+    ]
+    list_display_links = [
+        'id',
+    ]
+    raw_id_fields = [
+        'user_data',
     ]
     
