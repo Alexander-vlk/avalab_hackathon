@@ -10,12 +10,11 @@
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-black font-mono"
+	<body class="bg-black font-mono h-screen"
 		style="
 		background: rgb(98,98,241);
 background: radial-gradient(circle, rgba(98,98,241,1) 0%, rgba(98,98,241,1) 16%, rgba(0,0,0,1) 100%);	
 		"
-
 	>
 		{% include "header.html" %}
 		{% block content %}{% endblock content %}
