@@ -46,6 +46,39 @@ class UserData(models.Model):
     
     def __str__(self):
         return self.name
+    
+    
+class GeneratedData(models.Model):
+    user_data = models.OneToOneField(
+        UserData,
+        on_delete=models.CASCADE,
+        verbose_name='Пользовательские данные',
+    )
+    text = models.CharField(
+        max_length=5000,
+        null=True,
+        blank=True,
+        verbose_name='Сгенерированный текст',
+    )
+    
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name='Дата создания',
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name='Дата обновления',
+    )
+    
+    class Meta:
+        verbose_name = 'Сгенерированные данные'
+        
+    def __str__(self):
+        return self.text[:50]
+    
+    def save(self):
+        """Здесь должна быть логика обработки данных с использованием ИИ"""
+        return super().save()
 
 
 class DataFromSite(models.Model):
